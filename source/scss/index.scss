@@ -1,0 +1,57 @@
+//Подключение шрифта через препроцессор
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,700);
+
+// Файл обнуляющих стилей
+@import "nullindex.scss";
+
+// Переменные
+//$fz:80px;
+//$color_1:#14046d;
+
+// Шаблоны, для приминения вводи @extend
+//%tplborder {border-bottom: 3px dashed red;}
+
+// Миксин, для применения вводи @include
+//@mixin fontz($f, $c){
+//   font-size: $f;
+//   color: $c;
+//}
+//------------------------------------------
+body {
+   width: 100%;
+   font-family: 'Inter';
+   font-size: 40px;
+   line-height: 48px;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 47.62%);
+   &.success {
+      background: linear-gradient(180deg, rgba(0, 176, 28, 0.2) 24.48%, rgba(255, 255, 255, 0) 100%);
+      .title {
+         font-size: 39px;
+      }
+   }
+}
+.header {
+   margin: 0 auto;
+   max-width: 500px;
+   text-align: center;
+   .title {
+      margin: 115px 0 0 0;
+      font-weight: 700;
+   }
+   .message {
+      margin: 66px 0 0 0;
+   }
+   .btn {
+      margin: 94px 0 0 0;
+      padding: 10px 135px;
+      width: 100%;
+      height: 60px;
+      font-size: 32px;
+      line-height: 39px;
+      color: #fff;
+      background: #0094FF;
+
+   }
+}
+
+
