@@ -84,11 +84,12 @@ body.success {
   background: linear-gradient(180deg, rgba(0, 176, 28, 0.2) 24.48%, rgba(255, 255, 255, 0) 100%);
 }
 body.success .title {
-  font-size: 39px;
+  font-size: 37px;
 }
 
 .header {
   margin: 0 auto;
+  padding: 0 15px;
   max-width: 500px;
   text-align: center;
 }
@@ -98,6 +99,8 @@ body.success .title {
 }
 .header .message {
   margin: 66px 0 0 0;
+  height: 96px;
+  transition: opacity 0.3s ease;
 }
 .header .btn {
   margin: 94px 0 0 0;
@@ -108,4 +111,8 @@ body.success .title {
   line-height: 39px;
   color: #fff;
   background: #0094FF;
+  transition: background 0.3s ease;
+}
+.header .btn.btn[disabled] {
+  background: gray;
 }/*# sourceMappingURL=index.css.map */
