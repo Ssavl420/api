@@ -6,6 +6,32 @@ const message = document.querySelector('.message');
 
 btnActivity.addEventListener('click', getActivity)
 
+function getActivity() {
+
+   btnActivity.setAttribute("disabled", "disabled");
+   message.style.cssText = 'opacity: 0.2;';
+
+   fetch('https://www.boredapi.com/api/activity/')
+   .then(data => {
+      
+      if (data.status !== 200) {
+         return null;
+      }
+
+      return data.json();
+   })
+   .then(response => {
+
+      tagBodyHtml.classList.add('success');
+      title.innerText = `Ура, теперь не скучно 🔥`;
+      message.innerText = response.activity;
+
+      btnActivity.removeAttribute("disabled", "disabled");
+      message.style.cssText = 'opacity: 1;';
+
+   })
+}
+
 // function getActivity() {
 //    // fetch('https://www.boredapi.com/api/activity/')
 
@@ -51,28 +77,3 @@ btnActivity.addEventListener('click', getActivity)
 //       })()
 
 // }
-function getActivity() {
-
-   btnActivity.setAttribute("disabled", "disabled");
-   message.style.cssText = 'opacity: 0.2;';
-
-   fetch('https://www.boredapi.com/api/activity/')
-   .then(data => {
-      
-      if (data.status !== 200) {
-         return null;
-      }
-
-      return data.json();
-   })
-   .then(response => {
-
-      tagBodyHtml.classList.add('success');
-      title.innerText = `Ура, теперь не скучно 🔥`;
-      message.innerText = response.activity;
-
-      btnActivity.removeAttribute("disabled", "disabled");
-      message.style.cssText = 'opacity: 1;';
-
-   })
-}
