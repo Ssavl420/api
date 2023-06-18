@@ -115,4 +115,5 @@ body.success .title {
 }
 .header .btn.btn[disabled] {
   background: gray;
+  cursor: wait;
 }/*# sourceMappingURL=index.css.map */
